@@ -19,7 +19,7 @@ const Work = () => {
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
           My professional journey so far
         </p>
-        <div max-w-3xl mx-auto>
+        <div className="max-w-3xl mx-auto">
           <div className="space-y-12">
             {workData.map((data, index) => {
               return (
