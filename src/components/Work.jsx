@@ -22,7 +22,26 @@ const Work = () => {
         <div max-w-3xl mx-auto>
           <div className="space-y-12">
             {workData.map((data, index) => {
-              <div></div>;
+              return (
+                <div
+                  key={index}
+                  className="relative pl-12 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-purple cursor-pointer hover:-translate-y-2 transition-all duration-300"
+                >
+                  {/* TimeLine dot */}
+                  <div className="absolute left-[-0.5rem] top-0 w-6 h-6 rounded-full bg-purple"></div>
+                  {/* Box */}
+                  <div className="bg-dark-300 rounded-2xl p-6">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-semibold">{data.role}</h3>
+                      <span className="px-3 py-1 bg-purple/20 text-purple rounded-full text-xs md:text-sm">
+                        {data.duration}
+                      </span>
+                    </div>
+                    <p className="text-gray-400 mb-2">{data.company}</p>
+                    <p class="text-gray-300">{data.description}</p>
+                  </div>
+                </div>
+              );
             })}
           </div>
         </div>
